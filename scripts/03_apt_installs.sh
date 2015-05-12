@@ -39,6 +39,7 @@ sudo apt-get -y --force-yes install \
     libproj-dev \
     libxslt1-dev \
     libxml2-dev \
+    libmemcached-dev \
     python-lxml \
     libpq-dev \
     rabbitmq-server \
@@ -47,4 +48,4 @@ sudo apt-get -y --force-yes install \
 
 sudo easy_install pip
 
-sudo apt-get clean # Clear out cached packages.
+[ $CLEAN_APT_CACHE = "True" ] && sudo apt-get clean # Clear out cached packages.
